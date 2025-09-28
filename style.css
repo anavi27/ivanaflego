@@ -165,7 +165,6 @@ nav ul li a.active {
     font-weight: 700;
     /* podebljano */
     color: #64C37C;
-    /* opcionalno - naglasi aktivni jezik bojom */
 }
 
 /* Stil za stavke u dropdownu */
@@ -733,9 +732,10 @@ footer {
         align-items: center;
         /* centriraj slike */
         gap: 20px;
-        padding: 0 10px;
+        width: 100%;
         /* malo prostora sa strane */
         box-sizing: border-box;
+        padding: 0;
     }
 
     .gallery-item {
@@ -743,6 +743,7 @@ footer {
         /* slike zauzimaju 80% širine ekrana */
         max-width: 400px;
         /* opcionalno ograničenje */
+        margin: 0 auto;
         flex: none;
         border-radius: 30px;
         overflow: hidden;
