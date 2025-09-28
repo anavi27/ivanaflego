@@ -209,7 +209,8 @@
                     <a href="slike/FlegoIvanaCV.pdf" download class="gumb gumb2">Preuzmi CV</a>
                 </div>
                 <div class="contact-r">
-                    <form name="submit-to-google-sheet">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="6238f994-fdec-4f7d-96fe-a070886b0f09">
                         <input type="text" name="name" placeholder="Unesi Ime" required>
                         <input type="email" name="email" placeholder="Unesi E-mail" required>
                         <textarea name="message" rows="6" placeholder="Unesi zahtjev"></textarea>
@@ -253,26 +254,7 @@
 
     <script type="text/javascript" src="interakcijahr.js"></script>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx9f3-gtHxrORnKJiDgj1mgxXjP-71NtigWt_0ss3MVGRY0eDyDgMyl-U7zpjsvmHhT/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Hvala na upitu! Javit ću vam se uskoro!"
-                    setTimeout(function(){
-                        msg.innerHTML = ""
-                    },5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
-
-
+    
 </body>
 
 </html>
