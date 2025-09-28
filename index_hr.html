@@ -209,13 +209,14 @@
                     <a href="slike/FlegoIvanaCV.pdf" download class="gumb gumb2">Preuzmi CV</a>
                 </div>
                 <div class="contact-r">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="name" placeholder="Unesi Ime" required>
                         <input type="email" name="email" placeholder="Unesi E-mail" required>
                         <textarea name="message" rows="6" placeholder="Unesi zahtjev"></textarea>
                         <button type="submit" class="gumb gumb2">Pošalji <i
                                 class="fa-solid fa-paper-plane"></i></button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -251,6 +252,25 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
     <script type="text/javascript" src="interakcijahr.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzrlYA2yyoj0AKB0aPSWrsAjG_vj-Ogl2NrPwFDEuoBYGfrAADR6im0Baa3qng2E7N6/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Hvala na upitu! Javit ću vam se uskoro!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 
 
 </body>

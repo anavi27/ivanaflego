@@ -538,6 +538,13 @@ form .gumb2:hover {
     transform: scale(1.1);
 }
 
+#msg{
+    color: #64C37C;
+    margin-top: -40px;
+    display: block;
+    font-weight: 600;
+}
+
 nav .fa-solid {
     display: none;
 }

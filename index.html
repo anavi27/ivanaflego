@@ -206,12 +206,13 @@
                     <a href="slike/FlegoIvanaCV.pdf" download class="gumb gumb2">My CV</a>
                 </div>
                 <div class="contact-r">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="name" placeholder="Write Your Name" required>
                         <input type="email" name="email" placeholder="Write Your E-mail" required>
                         <textarea name="message" rows="6" placeholder="Write Your Message"></textarea>
                         <button type="submit" class="gumb gumb2">Send <i class="fa-solid fa-paper-plane"></i></button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -255,6 +256,25 @@
 
         window.addEventListener("load", function () {
             loader.style.display = "none";
+        })
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzrlYA2yyoj0AKB0aPSWrsAjG_vj-Ogl2NrPwFDEuoBYGfrAADR6im0Baa3qng2E7N6/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank you for your message! I will get back to you soon!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
     </script>
 </body>
