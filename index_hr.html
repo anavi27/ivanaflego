@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="slike/ivana_logo1.png">
+    <title>Ivana Flego - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a234231740.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="cursor outer"></div>
+    <div class="cursor inner"></div>
+    <nav id="izbornik">
+        <a href="index_hr.html">
+            <img src="slike/ivana_logo2.png" class="logo">
+        </a>
+        <ul id="sidemenu">
+            <li><a href=#header class="active">Početna</a></li>
+            <li><a href=#about>O meni</a></li>
+            <li><a href=#services>Usluge</a></li>
+
+            <li class="dropdown">
+                <a href="#projects" class="dropdown-btn">Projekti</a>
+                <ul class="dropdown-menu">
+                    <li><a href="galleryhr.html">Moji projekti</a></li>
+                </ul>
+            </li>
+            <li><a href=#contact>Kontakt</a></li>
+            <li class="lang-switcher">
+                <a href="index.html" data-lang="en">EN</a> | <a href="#" class="active-lang" data-lang="hr">HR</a>
+            </li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <section id="header">
+        <div class="container">
+
+            <div class="header-text">
+                <p>Ivana Flego</p>
+                <h1>Ja sam <span class="typedText"></span></h1>
+            </div>
+        </div>
+    </section>
+    <!--ABOUT ME DIO-->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <span class="vertical-text">O meni</span>
+                </div>
+                <div class="about-col-2">
+                    <p>Bok, ja sam <strong>Ivana Flego</strong>, studentica diplomskog studija Informatike na
+                        Sveučilištu u Rijeci.
+                        Posvećena sam kreiranju <strong>intuitivnih UI/UX dizajna</strong> i <strong>responzivnih,
+                            korisniku prilagođenih web stranica</strong>. Uživam u spajanju <strong>kreativnosti,
+                            funkcionalnosti i
+                            inovativnosti</strong> kako bih stvorila digitalna iskustva koja ostavljaju snažan dojam.</p>
+
+                    <p>Posjedujem 7 godina iskustva u radu s <strong>Photoshopom</strong>, opsežno znanje
+                        <strong>Figma alata</strong>
+                        te praktično iskustvo s <strong>HTML-om, CSS-om, JavaScript-om</strong> i
+                        <strong>Flutter-om</strong>.
+                        Odlično funkcioniram i napredujem u timskim okruženjima koja potiču učenje i pomicanje granica dizajna i tehnologije.
+                    </p>
+
+
+                    <div class="tab-naslovi">
+                        <p class="tab-link active-link" onclick="opentab('skills')">Vještine</p>
+                        <p class="tab-link" onclick="opentab('experience')">Iskustvo</p>
+                        <p class="tab-link" onclick="opentab('education')">Obrazovanje</p>
+                    </div>
+                    <div class="tab-sadrzaj active-tab" id="skills">
+                        <ul>
+                            <li><span>Dizajn</span><br>UI/UX Dizajn (web & mobile)<br>Vizualni Dizajn & Prototipiranje
+                                (Figma)<br>Branding & Logo Dizajn<br>Grafički Dizajn (Adobe Photoshop, Adobe
+                                Illustrator)</li>
+                            <li><span>Development</span><br>Web Development (WordPress, HTML/CSS/JS)<br>Flutter
+                                Development<br>Responsive & Interactive Web Design</li>
+                            <li><span>Content & Media</span><br>Dizajn Sadržaja za Društvene Mreže<br>Motion & Video
+                                Editing<br>Izrada Vizualnog Identiteta Brenda</li>
+
+                        </ul>
+
+                    </div>
+                    <div class="tab-sadrzaj" id="experience">
+                        <ul>
+                            <li><span>2023.</span><br>Stručna praksa u Nivago (Rijeka, Croatia) - Web Dizajn & Development (HTML/CSS/JS)
+                            </li>
+                            <li><span>2024.</span><br>FRAME14 (Labin, Croatia) - Web Dizajn & Development (WordPress)
+                            </li>
+                            <li><span>2025.</span><br>Oniria Studios (Zaragoza, Spain) - Web Dizajn & Izrada Sadržaja za Društvene Mreže (Figma, Adobe Photohop, Canva)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-sadrzaj" id="education">
+                        <ul>
+                            <li><span>2020. - Trenutno</span><br>Fakultet Informatike i Digitalnih Tehnologija u
+                                Rijeci, Hrvatska</li>
+                            <li><span>UDEMY Tečaj</span><br>The Front-End Web Developer Bootcamp: HTML, CSS, JS & React
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------SERVICES DIO------------->
+    <section id="services">
+        <div class="container">
+            <h1 class="naslov-poglavlje">Što mogu učiniti za vas?</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <h2>UI/UX<br>Dizajn</h2>
+                    <p>Kreiram inovativne, intuitivne i vizualno privlačne digitalne proizvode — od web stranica do
+                        mobilnih
+                        i
+                        cross-platform aplikacija. Kombiniranjem modernih UI trendova i čvrstih UX principa u Figma
+                        alatu
+                        osiguravam da svaki
+                        dizajn bude funkcionalan i pamtljiv.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Razvijam responzivne i interaktivne web stranice koje spajaju intuitivan dizajn s besprijekornim
+                        korisničkim
+                        iskustvom. Iskusna sam u radu s WordPress-om, HTML-om, CSS-om te posjedujem bazično znanje
+                        JavaScript-a, kao i u izradi
+                        osnovnih mobilnih
+                        aplikacija pomoću Flutter-a.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h2>Brandiranje i Vizualni Identitet</h2>
+                    <p>Dizajniram upečatljive logotipe i dosljedne vizualne identitete brendova koji odražavaju vrijednosti i viziju
+                        tvrtke,
+                        koristeći alate poput Adobe Photoshopa, Illustratora, Figme i Canve.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h2>Grafički Dizajn</h2>
+                    <p>Kreiram digitalne materijale, od etiketa i proizvoda do postera te sadržaja za društvene
+                        mreže,
+                        stvarajući atraktivne dizajne pomoću Adobe Photoshopa, Illustratora, Figma-e i Canve.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------PROJECTS DIO------------- -->
+
+    <section id="projects">
+        <div class="container">
+            <h1 class="naslov-poglavlje">Moji Projekti</h1>
+
+            <div class="projects-list">
+                <div class="project">
+                    <img src="slike/frame14.png">
+                    <div class="layer">
+                        <h3>Web stranica</h3>
+                        <p>Web stranica FRAME14. Otvori stranicu.</p>
+                        <a href="https://frame14.net/"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="slike/bc_montel.png">
+                    <div class="layer">
+                        <h3>Logo & Brand Dizajn</h3>
+                        <p>Logo dizajn i izrada vizualnog identiteta MONTEL tvrtke. Klikni i pogledaj detaljnije.</p>
+                        <a href="galleryhr.html#montel"><i class="fa-regular fa-images"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="slike/wine.png">
+                    <div class="layer">
+                        <h3>Dizajn Etiketa</h3>
+                        <p>Dizajn etiketa za Obiteljsko poljoprivredno gospodarstvo "Ledina". Klikni i pogledaj detaljnije. </p>
+                        <a href="galleryhr.html"><i class="fa-regular fa-images"></i></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="galleryhr.html" class="gumb">Pogledaj više projekata</a>
+        </div>
+    </section>
+
+    <!-----------------------CONTACT DIO-------------------- -->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-l">
+                    <h1 class="naslov-poglavlje">Kontakt</h1>
+                    <p><i class="fa-solid fa-envelope"></i> ivana.flego007@gmail.com</p>
+                    <!--<p><i class="fa-solid fa-phone"></i> 091-426-5465</p>-->
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ivana-flego-546110301/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.figma.com/@flegoivana">
+                            <i class="fa-brands fa-figma"></i></a>
+                    </div>
+                    <a href="slike/FlegoIvanaCV.pdf" download class="gumb gumb2">Preuzmi CV</a>
+                </div>
+                <div class="contact-r">
+                    <form>
+                        <input type="text" name="name" placeholder="Unesi Ime" required>
+                        <input type="email" name="email" placeholder="Unesi E-mail" required>
+                        <textarea name="message" rows="6" placeholder="Unesi zahtjev"></textarea>
+                        <button type="submit" class="gumb gumb2">Pošalji <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="top-footer">
+            <img src="slike/ivana_logo1.png">
+        </div>
+        <div class="middle-footer">
+            <ul class="footer-menu">
+                <li class="footer-menu-list">
+                    <a href="#header">Početna</a>
+                </li>
+                <li class="footer-menu-list">
+                    <a href="#about">O meni</a>
+                </li>
+                <li class="footer-menu-list">
+                    <a href="#services">Usluge</a>
+                </li>
+                <li class="footer-menu-list">
+                    <a href="#projects">Projekti</a>
+                </li>
+                <li class="footer-menu-list">
+                    <a href="#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script type="text/javascript" src="interakcijahr.js"></script>
+
+
+</body>
+
+</html>
