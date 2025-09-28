@@ -580,8 +580,7 @@ footer {
 }
 
 
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 390px) {
     #header {
         background-image: url(slike/slika_glavna.png);
         background-size: 80%;
@@ -736,6 +735,216 @@ footer {
         /* malo prostora sa strane */
         box-sizing: border-box;
         padding: 0;
+        margin: 0;
+    }
+
+    .gallery-item {
+        width: 100%;
+        /* slike zauzimaju 80% širine ekrana */
+        max-width: 200px;
+        /* opcionalno ograničenje */
+        margin: 0 auto;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+
+    .gallery-item img,
+    .gallery-item video {
+        width: 100%;
+        height: auto;
+        /* zadrži omjer slike */
+        display: block;
+        object-fit: contain;
+        /* sprječava da se “odrezuje” */
+    }
+
+    .gallery-item .caption {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .tab-naslovi1 .tab-link {
+        font-size: 13px;
+        text-align: center;
+    }
+
+
+    .my-project {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .middle-footer .footer-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu-list {
+        list-style: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 700px) {
+    #header {
+        background-image: url(slike/slika_glavna.png);
+        background-size: 80%;
+        background-position: center;
+    }
+
+    .header-text p {
+        margin-top: 20%;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 27px;
+    }
+
+    nav ul {
+        background: #64C37C;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 27px;
+        left: 27px;
+        cursor: pointer;
+    }
+
+    .lang-switcher a.active-lang {
+        font-weight: 700;
+        /* podebljano */
+        color: #ffffff;
+        /* opcionalno - naglasi aktivni jezik bojom */
+    }
+
+    nav ul li a.active {
+        font-weight: 900;
+        color: white;
+    }
+
+    .vertical-text {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        writing-mode: horizontal-tb;
+
+    }
+
+    .naslov-poglavlje {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 27px;
+    }
+
+    .about-col-1 {
+        font-size: 14px;
+        font-weight: 100;
+    }
+
+    .tab-link {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-l,
+    .contact-r {
+        flex-basis: 100%;
+    }
+
+    nav ul li {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 5px;
+        color: white;
+
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu:hover {
+        background-color: #367b52;
+    }
+
+    .services-list,
+    .projects-list,
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .project-col-1,
+    .project-col-2 {
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 27px;
+    }
+
+    .project-col-1 h1,
+    .projekt-naslov {
+        font-size: 2rem;
+        /* Smanjenje veličine naslova */
+        align-items: center;
+    }
+
+    .project-col-1 {
+        margin-bottom: 27px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* centriraj slike */
+        gap: 20px;
+        width: 100%;
+        /* malo prostora sa strane */
+        box-sizing: border-box;
+        padding: 0;
+        grid-template-columns: none !important;
     }
 
     .gallery-item {
@@ -773,6 +982,8 @@ footer {
     .my-project {
         align-items: center;
         justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .middle-footer .footer-menu {
@@ -954,7 +1165,7 @@ svg {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    grid-template-columns: repeat(2,1fr);
     gap: 20px;
     max-width: 100%;
     margin: 0 auto;
