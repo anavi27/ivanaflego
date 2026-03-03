@@ -192,7 +192,7 @@ nav ul li a.active {
     display: block;
 }
 
-.header-text p {
+.header-text .my-name {
     margin-top: 20%;
     font-size: 15px;
 
