@@ -205,6 +205,58 @@ function showSlide4(n) {
     slides[slideIndex].style.display = "block";           
 }
 
+function openModal5() {
+    const modal = document.getElementById("projectModal5");
+    modal.style.display = "flex";
+
+    showSlide5(0);
+}
+
+function closeModal5() {
+    const modal = document.getElementById("projectModal5");
+    modal.style.display = "none";
+}
+
+function showSlide5(n) {
+    const slides = document.querySelectorAll("#projectModal5 .carousel-item");
+
+    if (slides.length === 0) return;
+
+    if (n >= slides.length) slideIndex = 0;
+    else if (n < 0) slideIndex = slides.length - 1;
+    else slideIndex = n;
+
+    slides.forEach(slide => slide.style.display = "none"); 
+    slides[slideIndex].style.display = "block";           
+}
+
+
+function openModal6() {
+    const modal = document.getElementById("projectModal6");
+    modal.style.display = "flex";
+
+    showSlide6(0);
+}
+
+function closeModal6() {
+    const modal = document.getElementById("projectModal6");
+    modal.style.display = "none";
+}
+function showSlide6(n) {
+    const slides = document.querySelectorAll("#projectModal6 .carousel-item");
+
+    if (slides.length === 0) return;
+
+    if (n >= slides.length) slideIndex = 0;
+    else if (n < 0) slideIndex = slides.length - 1;
+    else slideIndex = n;
+
+    slides.forEach(slide => slide.style.display = "none"); 
+    slides[slideIndex].style.display = "block";           
+}
+
+
+
 const cursor = document.querySelectorAll(".cursor");
 const links = document.querySelectorAll("a, .tab-link, button");
 
