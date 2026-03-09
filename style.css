@@ -595,7 +595,7 @@ footer {
     }
 
     .header-text .my-name {
-        margin-top: 20%;
+        margin-top: 10%;
         text-align: center;
         opacity: 0;
     }
@@ -810,7 +810,7 @@ footer {
     }
 
     .header-text h1 {
-        font-size: 40px;
+        font-size: 30px;
         text-align: center;
     }
 
