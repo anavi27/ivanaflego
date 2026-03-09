@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-.cursor{
+.cursor {
     position: absolute;
     height: 35px;
     width: 35px;
@@ -16,26 +16,26 @@
 
 }
 
-.outer{
+.outer {
     border: 2px solid #122f19a9;
 }
 
-.inner{
+.inner {
     background: #64C37C50;
     transition: 250ms ease-out;
 }
 
 .cursor.hover {
     transform: translate(-20%, -20%) scale(2);
-    transition: transform 250ms ease-in-out ;
+    transition: transform 250ms ease-in-out;
 }
 
-.inner.hover{
+.inner.hover {
     background: #64C37C90;
-    mix-blend-mode:lighten;
+    mix-blend-mode: lighten;
 }
 
-a{
+a {
     cursor: none;
 }
 
@@ -538,7 +538,7 @@ form .gumb2:hover {
     transform: scale(1.1);
 }
 
-#msg{
+#msg {
     color: #64C37C;
     margin-top: -40px;
     display: block;
@@ -594,7 +594,7 @@ footer {
         background-position: center;
     }
 
-    .header-text p {
+    .header-text .my-name {
         margin-top: 20%;
         text-align: center;
         opacity: 0;
@@ -802,10 +802,10 @@ footer {
         background-position: center;
     }
 
-    .header-text p {
-        margin-top: 20%;
+    .header-text .my-name {
+        margin-top: 30%;
         text-align: center;
-        opacity: 0;
+
     }
 
     .header-text h1 {
@@ -922,23 +922,53 @@ footer {
         grid-gap: 20px;
     }
 
-    .project-col-1,
-    .project-col-2 {
-        flex-basis: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 27px;
-    }
-
-    .project-col-1 h1,
-    .projekt-naslov {
-        font-size: 2rem;
-        /* Smanjenje veličine naslova */
-        align-items: center;
+    .project-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .project-col-1 {
-        margin-bottom: 27px;
+        flex-basis: 100% !important; /* Ovo je ključno jer je na desktopu 60% */
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 10px !important; /* Smanjujemo bočni padding */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        min-height: auto !important; /* Resetiramo fiksnu visinu s desktopa */
+    }
+
+    .projekt-naslov {
+        font-size: 2rem !important;
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10px 0 !important;
+    }
+
+    .obican-text {
+        width: 100% !important;
+        padding: 10px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .project-col-2 {
+        flex-basis: 100% !important; /* Na desktopu je 35%, ovdje mora biti 100% */
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+
+    .project-col-2 img {
+        width: 90% !important; /* Malo uže da ne dotiče rubove ekrana */
+        border-radius: 50px !important; /* Na mobitelu nepravilni oblici znaju izgledati čudno */
+        margin: 0 auto !important;
     }
 
     .gallery {
@@ -979,6 +1009,9 @@ footer {
         font-size: 12px;
         padding: 8px;
     }
+}
+
+    
 
     .tab-naslovi1 .tab-link {
         font-size: 13px;
@@ -1003,7 +1036,7 @@ footer {
     }
 
 
-}
+
 
 @media only screen and (max-width: 800px) {
 
@@ -1172,7 +1205,7 @@ svg {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 100%;
     margin: 0 auto;
