@@ -338,6 +338,7 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: 450px;
 }
 
 .services-list div i {

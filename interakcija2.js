@@ -205,6 +205,7 @@ function showSlide4(n) {
     slides[slideIndex].style.display = "block";           
 }
 
+//peti
 function openModal5() {
     const modal = document.getElementById("projectModal5");
     modal.style.display = "flex";
@@ -230,7 +231,7 @@ function showSlide5(n) {
     slides[slideIndex].style.display = "block";           
 }
 
-
+//sesti
 function openModal6() {
     const modal = document.getElementById("projectModal6");
     modal.style.display = "flex";
@@ -244,6 +245,66 @@ function closeModal6() {
 }
 function showSlide6(n) {
     const slides = document.querySelectorAll("#projectModal6 .carousel-item");
+
+    if (slides.length === 0) return;
+
+    if (n >= slides.length) slideIndex = 0;
+    else if (n < 0) slideIndex = slides.length - 1;
+    else slideIndex = n;
+
+    slides.forEach(slide => slide.style.display = "none"); 
+    slides[slideIndex].style.display = "block";           
+}
+
+//sedmi
+function openModal7() {
+    const modal = document.getElementById("projectModal7");
+    modal.style.display = "flex";
+
+    showSlide7(0);
+}
+
+function closeModal7() {
+    const modal = document.getElementById("projectModal7");
+    modal.style.display = "none";
+}
+
+function changeSlide7(n) {
+    showSlide7(slideIndex + n);
+} 
+
+function showSlide7(n) {
+    const slides = document.querySelectorAll("#projectModal7 .carousel-item");
+
+    if (slides.length === 0) return;
+
+    if (n >= slides.length) slideIndex = 0;
+    else if (n < 0) slideIndex = slides.length - 1;
+    else slideIndex = n;
+
+    slides.forEach(slide => slide.style.display = "none"); 
+    slides[slideIndex].style.display = "block";           
+}
+
+//osmi
+function openModal8() {
+    const modal = document.getElementById("projectModal8");
+    modal.style.display = "flex";
+
+    showSlide8(0);
+}
+
+function closeModal8() {
+    const modal = document.getElementById("projectModal8");
+    modal.style.display = "none";
+}
+
+function changeSlide8(n) {
+    showSlide8(slideIndex + n);
+}
+
+function showSlide8(n) {
+    const slides = document.querySelectorAll("#projectModal8 .carousel-item");
 
     if (slides.length === 0) return;
 
